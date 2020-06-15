@@ -1,0 +1,64 @@
+@import "minireset.scss";
+$backgroundColor: #555555;
+$menuColor: black;
+$textColor: white;
+$secondcolorDev: #acff4d;
+$secondcolorPics: #66ccff;
+$secondcolorAbout: #ff5c6c;
+$secondcolorContact: #ff951c;
+
+* {
+  color: $textColor;
+  font-family: sans-serif;
+}
+
+h1, li {
+  font-weight: bold;
+}
+
+a, li {
+  text-decoration: none;
+  &:hover {
+    .dev {
+      color: $secondcolorDev;
+    }
+    .pics {
+      color: $secondcolorPics;
+    }
+    .about {
+      color: $secondcolorAbout;
+    }
+    .contact {
+      color: $secondcolorContact;
+    }
+
+  }
+
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.3em;
+}
+
+body {
+  background-color: $backgroundColor;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: $menuColor;
+}
+
+.nav {
+  display: flex;
+  li {
+    margin: 1em;
+  }
+}
+
+.category {
+  width: 30%;
+  //background-color: red;
+}
