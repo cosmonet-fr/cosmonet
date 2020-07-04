@@ -81,6 +81,11 @@ h1 {
   margin: 0.3em;
 }
 
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
 body {
   background-color: #555555;
 }
@@ -89,6 +94,12 @@ header {
   display: flex;
   justify-content: space-between;
   background-color: black;
+}
+
+section {
+  margin-top: 13%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .nav {
@@ -100,7 +111,34 @@ header {
 }
 
 .category {
-  width: 30%;
+  width: 28em;
+  height: 28em;
+  display: flex;
+  flex-direction: column-reverse;
+  cursor: pointer;
+}
+
+.category--dev {
+  border: solid #acff4d;
+  background-image: url("../images/code.jpeg");
+}
+
+.category--pics {
+  border: solid #66ccff;
+  background-image: url("../images/pics.jpeg");
+}
+
+.description {
+  text-align: center;
+  padding: 1.5em;
+}
+
+.description--dev {
+  background-color: #acff4d;
+}
+
+.description--pics {
+  background-color: #66ccff;
 }
 
 /*# sourceMappingURL=master.css.map */

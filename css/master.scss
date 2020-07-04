@@ -41,6 +41,11 @@ h1 {
   margin: 0.3em;
 }
 
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
 body {
   background-color: $backgroundColor;
 }
@@ -49,6 +54,11 @@ header {
   display: flex;
   justify-content: space-between;
   background-color: $menuColor;
+}
+section {
+  margin-top: 13%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .nav {
@@ -59,6 +69,28 @@ header {
 }
 
 .category {
-  width: 30%;
-  //background-color: red;
+  width: 28em;
+  height: 28em;
+  display: flex;
+  flex-direction: column-reverse;
+  cursor: pointer;
+}
+.category--dev {
+  border: solid $secondcolorDev;
+  background-image: url("../images/code.jpeg");
+}
+.category--pics {
+  border: solid $secondcolorPics;
+  background-image: url("../images/pics.jpeg"); 
+}
+
+.description {
+  text-align: center;
+  padding: 1.5em;
+}
+.description--dev {
+  background-color: $secondcolorDev;
+}
+.description--pics {
+  background-color: $secondcolorPics;
 }
