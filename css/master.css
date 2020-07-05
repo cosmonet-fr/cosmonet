@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -97,7 +98,7 @@ header {
 }
 
 section {
-  margin-top: 13%;
+  margin-top: 8%;
   display: flex;
   justify-content: space-around;
 }
@@ -111,8 +112,8 @@ section {
 }
 
 .category {
-  width: 28em;
-  height: 28em;
+  width: 38em;
+  height: 38em;
   display: flex;
   flex-direction: column-reverse;
   cursor: pointer;
@@ -139,6 +140,51 @@ section {
 
 .description--pics {
   background-color: #66ccff;
+}
+
+.page {
+  z-index: -1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headband {
+  position: absolute;
+  top: 50%;
+  /* poussé de la moitié de hauteur du référent */
+  transform: translateY(-50%);
+  /* tiré de la moitié de sa propre hauteur */
+  width: 10%;
+  height: 100%;
+}
+
+.headband .titleOfPage {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  rotate: -90deg;
+}
+
+.headband .titleOfPage h2 {
+  font-size: 4em;
+  color: #555555;
+}
+
+.headband--dev {
+  background-color: #acff4d;
+}
+
+.headband--pics {
+  background-color: #66ccff;
+}
+
+.headband--about {
+  background-color: #ff5c6c;
+}
+
+.headband--contact {
+  background-color: #ff951c;
 }
 
 /*# sourceMappingURL=master.css.map */

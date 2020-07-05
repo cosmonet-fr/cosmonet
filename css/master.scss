@@ -56,7 +56,7 @@ header {
   background-color: $menuColor;
 }
 section {
-  margin-top: 13%;
+  margin-top: 8%;
   display: flex;
   justify-content: space-around;
 }
@@ -69,8 +69,8 @@ section {
 }
 
 .category {
-  width: 28em;
-  height: 28em;
+  width: 38em;
+  height: 38em;
   display: flex;
   flex-direction: column-reverse;
   cursor: pointer;
@@ -81,7 +81,7 @@ section {
 }
 .category--pics {
   border: solid $secondcolorPics;
-  background-image: url("../images/pics.jpeg"); 
+  background-image: url("../images/pics.jpeg");
 }
 
 .description {
@@ -94,3 +94,32 @@ section {
 .description--pics {
   background-color: $secondcolorPics;
 }
+
+.page {
+  z-index: -1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.headband{
+  position: absolute;
+  top: 50%; /* poussé de la moitié de hauteur du référent */
+  transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+  width: 10%;
+  height: 100%;
+  .titleOfPage{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    rotate: -90deg;
+    h2 {
+      //text-align: center;
+      font-size: 4em;
+      color: $backgroundColor;
+    }
+  }
+}
+.headband--dev{background-color: $secondcolorDev;}
+.headband--pics{background-color: $secondcolorPics;}
+.headband--about{background-color: $secondcolorAbout;}
+.headband--contact{background-color: $secondcolorContact;}
