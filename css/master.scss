@@ -16,9 +16,11 @@ h1, li {
   font-weight: bold;
 }
 
-a, li {
-  text-decoration: none;
-  &:hover {
+li {
+  a {
+    text-decoration: none;
+  }
+  &:hover, .fixedColor {
     .dev {
       color: $secondcolorDev;
     }
@@ -31,9 +33,7 @@ a, li {
     .contact {
       color: $secondcolorContact;
     }
-
   }
-
 }
 
 h1 {
@@ -44,6 +44,11 @@ h1 {
 h2 {
   font-size: 2em;
   font-weight: bold;
+}
+h3 {
+  font-size: 2em;
+  font-weight: bold;
+  color: $textColor;
 }
 
 body {
@@ -58,7 +63,7 @@ header {
 section {
   margin-top: 8%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .nav {
@@ -96,26 +101,30 @@ section {
 }
 
 .page {
-  z-index: -1;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 .headband{
+  z-index: -1;
   position: absolute;
   top: 50%; /* poussé de la moitié de hauteur du référent */
   transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
   width: 10%;
   height: 100%;
   .titleOfPage{
+    display: flex;
+    justify-content: center;
     position: absolute;
+    rotate: -90deg;
     top: 50%;
     width: 100%;
-    rotate: -90deg;
     h2 {
-      //text-align: center;
       font-size: 4em;
       color: $backgroundColor;
+    }
+    em {
+      opacity: 0;
     }
   }
 }
@@ -123,3 +132,42 @@ section {
 .headband--pics{background-color: $secondcolorPics;}
 .headband--about{background-color: $secondcolorAbout;}
 .headband--contact{background-color: $secondcolorContact;}
+
+//Web site book
+.content {
+  margin-left: 12%;
+}
+.website {
+  cursor: pointer;
+  width: 35em;
+  background-color: $menuColor;
+  transition: all 0.4s ease-out;
+  &:hover {
+    background-color: $secondcolorDev;
+  }
+}
+.descWebSite {
+  padding: 1em;
+  h3 {
+    text-align: center;
+  }
+}
+
+//form
+label {
+  margin: 0.8em;
+  font-size: 1.5em;
+}
+input, textarea {
+  color: $menuColor;
+  margin: 2em;
+  padding: 1em;
+  width: 70rem;
+}
+textarea {
+  height: 18rem;
+}
+
+.form {
+  width: 50%;
+}
