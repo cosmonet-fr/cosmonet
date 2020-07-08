@@ -1,9 +1,9 @@
 @import "minireset.scss";
-$backgroundColor: #555555;
+$backgroundColor: white;
 $menuColor: black;
 $textColor: white;
-$secondcolorDev: #acff4d;
-$secondcolorPics: #66ccff;
+$secondcolorDev: #3be5c9;
+$secondcolorPics: #bb1efe;
 $secondcolorAbout: #ff5c6c;
 $secondcolorContact: #ff951c;
 
@@ -12,6 +12,11 @@ $secondcolorContact: #ff951c;
   font-family: sans-serif;
 }
 
+h1 {
+  a {
+    text-decoration: none;
+  }
+}
 h1, li {
   font-weight: bold;
 }
@@ -61,7 +66,6 @@ header {
   background-color: $menuColor;
 }
 section {
-  margin-top: 8%;
   display: flex;
   justify-content: space-evenly;
 }
@@ -74,30 +78,39 @@ section {
 }
 
 .category {
-  width: 38em;
-  height: 38em;
+  min-height: 100vh;
+  width: 25%;
+  //height: 38em;
   display: flex;
   flex-direction: column-reverse;
   cursor: pointer;
 }
 .category--dev {
-  border: solid $secondcolorDev;
   background-image: url("../images/code.jpeg");
 }
 .category--pics {
-  border: solid $secondcolorPics;
   background-image: url("../images/pics.jpeg");
 }
-
+.selectBox {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.4s ease-out;
+  &:hover{
+    opacity: .95;
+  }
+}
+.selectBox--dev {
+  background-color: $secondcolorDev;
+  border: solid $secondcolorDev;
+}
+.selectBox--pics {
+  background-color: $secondcolorPics;
+  border: solid $secondcolorPics;
+}
 .description {
   text-align: center;
   padding: 1.5em;
-}
-.description--dev {
-  background-color: $secondcolorDev;
-}
-.description--pics {
-  background-color: $secondcolorPics;
 }
 
 .page {
